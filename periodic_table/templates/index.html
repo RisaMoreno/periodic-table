@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exploring the Periodic Table</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div id="container">
+        <div id="body">
+            <div id="image">
+                <img src="{% static 'img/periodic_table.jpg' %}" width="1920" height="1080" usemap="#periodic_table">
+                <map name="periodic_table">
+                    <area href="/element_series/6" shape="poly" coords="141,103, 232,103, 232,193, 141,193">
+                    <area href="/element_series/1" shape="poly" coords="141,193, 232,193, 232,739, 141,739">
+                    <area href="/element_series/2" shape="poly" coords="232,193, 324,193, 324,739, 232,739">
+                    <area href="/element_series/3" shape="poly" coords="324,375, 324,557, 415,557, 415,739, 1234,739, 1234,375">
+                    <area href="/element_series/5" shape="poly" coords="1234,193, 1234,285, 1324,285, 1324,193">
+                    <area href="/element_series/4" shape="poly" coords="1234,285, 1234,739, 1598,739, 1598,649, 1506,649, 1506,557, 1416,557, 1416,467, 1324,467, 1324,285">
+                    <area href="/element_series/5" shape="poly" coords="1324,285, 1324,467, 1416,467, 1416,557, 1506,557, 1506,649, 1598,649, 1598,467, 1506,467, 1506,375, 1416,375, 1416,285">
+                    <area href="/element_series/6" shape="poly" coords="1324,193, 1324,285, 1416,285, 1416,375, 1506,375, 1506,467, 1598,467, 1598,193">
+                    <area href="/element_series/7" shape="poly" coords="1598,193, 1690,193, 1690,739, 1598,739">
+                    <area href="/element_series/8" shape="poly" coords="1690,103, 1690,739, 1779,739, 1779,103">
+                    <area href="/element_series/9" shape="poly" coords="324,557, 324,649, 415,649, 415,557">
+                    <area href="/element_series/10" shape="poly" coords="324,649, 324,739, 415,739, 415,649">
+                    <area href="/element_series/9" shape="poly" coords="350,755, 350,845, 1715,845, 1715,755">
+                    <area href="/element_series/10" shape="poly" coords="350,845, 350,938, 1715,938, 1715,845">
+                </map>
+                <script
+                    src="https://code.jquery.com/jquery-3.4.1.min.js"
+                    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                    crossorigin="anonymous"></script>
+                <script src="{% static 'js/jquery.rwdImageMaps.min' %}"></script>
+                <script>
+                $(document).ready(function(e) {
+                    $('img[usemap]').rwdImageMaps();
+                    $.get("https://neelpatel05.pythonanywhere.com/element/groupblock?groupblock=", function(res) {
+                        console.log(res);
+                    }, "json");
+                });
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
