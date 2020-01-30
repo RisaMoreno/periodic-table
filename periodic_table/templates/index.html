@@ -14,6 +14,8 @@
             <div id="image">
                 <img src="{% static 'img/periodic_table.jpg' %}" width="1920" height="1080" usemap="#periodic_table">
                 <map name="periodic_table">
+                    <area href="/atom/1" shape="poly" coords="141,103, 232,103, 232,193, 141,193">
+
                     <area href="/element_series/6" shape="poly" coords="141,103, 232,103, 232,193, 141,193">
                     <area href="/element_series/1" shape="poly" coords="141,193, 232,193, 232,739, 141,739">
                     <area href="/element_series/2" shape="poly" coords="232,193, 324,193, 324,739, 232,739">
@@ -29,15 +31,12 @@
                     <area href="/element_series/9" shape="poly" coords="350,755, 350,845, 1715,845, 1715,755">
                     <area href="/element_series/10" shape="poly" coords="350,845, 350,938, 1715,938, 1715,845">
                 </map>
-                <script
-                    src="https://code.jquery.com/jquery-3.4.1.min.js"
-                    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-                    crossorigin="anonymous"></script>
-                <script src="{% static 'js/jquery.rwdImageMaps.min.js' %}"></script>
+                <script src="{% static 'javascript/jquery.min.js' %}"></script>
+                <script src="{% static 'javascript/jquery.rwdImageMaps.min.js' %}"></script>
                 <script>
-                    $(document).ready(function(e) {
-                        $('img[usemap]').rwdImageMaps();
-                    });
+                $(document).ready(function(e) {
+                    $('img[usemap]').rwdImageMaps();
+                });
                 </script>
             </div>
         </div>
