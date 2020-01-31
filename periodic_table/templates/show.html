@@ -5,33 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
-    
-    <h3>Name:{{atom.name}}</h3>
-    <h3>Symbol:{{atom.symbol}}</h3>
-    <h3>Atomic number:{{atom.atomicNumber}}</h3>
-    <h3>Atomic mass:{{atom.atomicMass}}</h3>
-    <h3>Electronegativity:{{atom.electronegativity}}</h3>
-    <h3>Melting point:{{atom.meltingPoint}}</h3>
-    <h3>Boiling point:{{atom.boilingPoint}}</h3>
-    <h3>Density:{{atom.density}}</h3>
-    <h3>Electronaffinity:{{atom.electronAffinity}}</h3>
-    <h3>IonizationEnergy:{{atom.ionizationEnergy}}</h3>
-    <h3>Group Block:{{atom.groupBlock}}</h3>
-    <h3>Bonding type:{{atom.bondingType}}</h3>
-    <h3>Year discovered:{{atom.yearDiscovered}}</h3>
-    <h3>Atomic radius:{{atom.atomicRadius}}</h3>
-    <h3>Electron Configuration:{{atom.electronicConfiguration}}</h3>
-    <h3> Oxidation state:{{atom.oxidationStates}}</h3>
-    <h3>Standard State:{{atom.standardState}}</h3>
-    <h3>VanDerWaals Radius:{{atom.vanDerWaalsRadius}}</h3>
-    
-    
+    <div id="container"> 
+        <div id="left">
+            <p>Standard State:{{atom.standardState}}</p>
+            <p>Melting point:{{atom.meltingPoint}}</p>
+            <p>Boiling point:{{atom.boilingPoint}}</p>
+            <p>Density:{{atom.density}}</p>
+            <p>Bonding type:{{atom.bondingType}}</p>
+            <p>VanDerWaals Radius:{{atom.vanDerWaalsRadius}}</p>
+        </div>
+        <div id="main">
+            <div id="head">
+                <h1>Name:{{atom.name}}</h1>
+                <h2>Group Block:{{atom.groupBlock}}</h2>
+            </div>
+            <div id="center">
+                <div id="number">
+                    <h2>Atomic number:{{atom.atomicNumber}}</h2>
+                </div>
+                <div id="symbol">
+                    <h1>Symbol:{{atom.symbol}}</h1>
+                    <h3>Atomic mass:{{atom.atomicMass}}</h3>
+                </div>
+            </div>
+            <div id="foot">
+                <h3>Year discovered:{{atom.yearDiscovered}}</h3>
+            </div>
+        </div>
+        <div id="right">
+            <p>Electronegativity:{{atom.electronegativity}}</p>
+            <p>Electronaffinity:{{atom.electronAffinity}}</p>
+            <p>IonizationEnergy:{{atom.ionizationEnergy}}</p>
+            <p>Atomic radius:{{atom.atomicRadius}}</p>
+            <p>Electron Configuration:{{atom.electronicConfiguration}}</p>
+            <p> Oxidation state:{{atom.oxidationStates}}</p>
+            <p> <a href="Goback"> Go Back</a></p>
+        </div>
 
-
-
-
-
-</body>
+ </body>
 </html>
